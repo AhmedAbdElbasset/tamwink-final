@@ -1,0 +1,188 @@
+* {
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787e0;
+    --main-transition-durayion: 0.5s;
+    --main-pading-top: 100px;
+    --main-pading-bottom: 100px;
+    --main-background-color: #e7e7e7;
+}
+
+body {
+    height: 100%;
+    overflow-y: hidden;
+}
+.container .images img{
+    height: 400px;
+    position: absolute;
+    left: 29px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+.container .sign_up{
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+.container .sign_up h2 {
+    font-size: 35px;
+    position: relative;
+    transition: var(--main-transition-durayion);
+}
+.container .sign_up h2:hover {
+    color: var(--main-color);
+}
+
+.container .sign_up input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+    position: relative;
+    width: 100%;
+    color: var(--main-color);
+    height: 37px;
+    border: 1px solid #eee;
+    border-bottom: 2px solid var(--main-color);
+    transition: var(--main-transition-durayion);
+    padding-right: 30px;
+}
+
+.container .sign_up .email i{
+    top: 110px;
+    right: 7px;
+    margin-top: -3px;
+    padding: 0px;
+    position: absolute;
+    z-index: 100;
+    color: #aaa;
+    font-size: 20px;
+    transition: var(--main-transition-durayion);
+}
+.container .sign_up .email:hover i {
+    color: var(--main-color);
+}
+.container .sign_up .password i {
+    top: 179px;
+    right: 7px;
+    margin-top: -3px;
+    padding: 0px;
+    position: absolute;
+    z-index: 100;
+    color: #aaa;
+    font-size: 20px;
+    transition: var(--main-transition-durayion);
+}
+.container .sign_up .password:hover i {
+    color: var(--main-color);
+}
+.container .sign_up input:focus {
+    border-bottom: 2px solid var(--main-color);
+    outline: none;
+    
+}
+.container .sign_up input:focus::placeholder {
+    color: transparent;
+}
+.container .sign_up input[type="checkbox"]{
+    width: 17px;
+}
+.container .sign_up input[type="checkbox"]:checked {
+    border: var(--main-color);
+    margin-bottom: 5px;
+}
+.container .sign_up label{
+    position: absolute;
+    right: 29px;
+    top: 245px;
+}
+.container .sign_up a.old{
+    color: white;
+    width: 126px;
+    display: block;
+    height: 41px;
+    background-color: var(--main-color);
+    padding: 11px 11px;
+    border-radius: 8px;
+    transition: var(--main-transition-durayion);
+}
+.container .sign_up a.old:hover {
+    box-shadow: 3px 3px 4px 2px grey;
+    transform: translateY(-4px);
+}
+.container .sign_up a.new {
+    right: 6px;
+    position: absolute;
+    bottom: -33px;
+    font-size: 12px;
+    color: black;
+    transition: var(--main-transition-durayion);
+}
+.container .sign_up a.new:hover {
+    color: var(--main-color);
+}
+@media (max-width:769px) {
+    .container .images img {
+        height: 307px;
+        left: 9px;
+    }
+    .container .sign_up{
+    right: 11%;
+    top: 50%;
+    }
+}
+@media (max-width:585px) {
+    .container .images img {
+        height: 183px;
+        left: 35%;
+        top: 100px;
+        }
+    
+        .container .sign_up {
+            right: 34%;
+            top: 54%;
+        }
+    .container .sign_up a.old {
+        width: 92px;
+        font-size: 12px;
+        padding: 13px 10px;
+    }
+}
+@media (max-width:413px) {
+    .container .images img {
+        height: 300px;
+        left: 14%;
+        top: 224px;
+    }
+    .container .sign_up h2 {font-size: 18px;}
+    .container .sign_up {
+        right: 23%;
+        top: 63%;
+        width: 60%;
+    }
+    .container .sign_up .password i {
+        top: 134px;
+        font-size: 15px;
+    }
+    .container .sign_up .email i {
+        top: 65px;
+        font-size: 15px;
+    }
+    .container .sign_up label {
+        top: 200px;
+    }
+    .container .sign_up a.old {
+        width: 79px;
+        font-size: 10px;
+        padding: 8px 10px;
+        height: 30px;
+        margin-top: -15px;
+    }
+}

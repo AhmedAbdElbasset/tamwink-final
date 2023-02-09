@@ -1,0 +1,190 @@
+* {
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2196F3;
+    --main-color-alt: #1787e0;
+    --main-transition-durayion: 0.5s;
+    --main-pading-top: 100px;
+    --main-pading-bottom: 100px;
+    --main-background-color: #e7e7e7;
+}
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.images img{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    left: 0;
+    height: 294px;
+    bottom: 28px;
+}
+/* Start container  */
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 150px));
+    gap: 49px 76px;
+    margin-left: 10px;
+    margin-right: -1px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    top: 93px;
+    right: 22px;
+}
+@media (max-width:439px) {
+    body{
+        overflow-x: hidden;
+    }
+    .container {
+        gap: 35px 77px;
+        margin-left: -6px;
+        margin-right: -8px;
+    }
+}
+@media (max-width:619px) {
+    .container {
+        width: 88%;
+        gap: 37px 61px;
+        margin-right: 5px;
+        top: 70px;
+    }
+}
+.container .box {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 11px;
+    height: 180px;
+    box-shadow: 6px 6px 15px 0px #60606052;
+    transition: var(--main-transition-durayion);
+}
+.container .box:hover {
+    border-color: var(--main-color);
+    background-color: #eee;
+    box-shadow: 6px 6px 15px 0px #606060;
+    z-index: 1000;
+}
+.container .box .image{
+    width: 100%;
+    height: 64%;
+    background-color: white;
+    transition: var(--main-transition-durayion);
+}
+.container .box:hover .image {
+    background-color: var(--main-color);
+}
+.container .box .image img{
+    height: 80px;
+    margin-right: 49px;
+    margin-top: 12px;
+}
+.container .box:hover .layer {
+    background-color: white;
+
+}
+.container .box .button{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    transition: 0.3s;
+}
+.container .box:hover .button {
+    color: black;
+
+}
+.container .box .button a {
+    margin-left: 13px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+    transition: var(--main-transition-durayion);
+}
+.container .box .button a.left {
+    position: absolute;
+    left: -53px;
+    top: -4px;
+    transition: 0.3s;
+}
+.container .box:hover .button a{
+    color: black;
+}
+.container .box .button a:hover {
+    color: white;
+    margin-left: 13px;
+    margin-top: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+
+}
+.container .box .button a i{
+    position: absolute;
+    right: -30px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 3px 4px;
+}
+
+.container .box .button a i:hover {
+    background-color: var(--main-color);
+}
+.container .box .button .counter{
+    position: relative;
+    top: -15px;
+    left: 5px;
+}
+.container .box .layer{
+    position: relative;
+    width: 100%;
+    height: 46%;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+.container .box .layer .description{
+    position: absolute;
+    right: -67px;
+    top: -38px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.container .box:hover .layer .description {
+right: 10px;
+}
+.container .box .layer .description p {
+    margin-bottom: -5px;
+}
+.container .box .layer .description p.name{
+    color: white;
+}
+.container .box .layer .description p.price {
+    color: var(--main-color);
+}
+.container .box .layer p.limit {
+    color: var(--main-color);
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 24px;
+    display: none;
+    transition:0.3s;
+    position: absolute;
+    top: 34px;
+    right: 8px;
+    /* opacity: 0; */
+}
+/* End container  */
